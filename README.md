@@ -4,14 +4,6 @@ This repository contains Python tools used for a capstone research project inves
 
 The project focuses on stream-level analysis rather than whole-document PDF rewriting. The workflow scans PDF files, extracts selected stream types, trains category-specific dictionaries, benchmarks vanilla Brotli and dictionary-assisted Brotli, and compares the resulting compressed sizes.
 
-## Project purpose
-
-Brotli is a modern lossless compression format that combines LZ77-style matching, Huffman coding, and dictionary-based matching. Standard Brotli already performs well on many text-like inputs, but its built-in dictionary is mainly designed around web content. This project investigates whether PDF-specific stream data contains repeated patterns that can be captured by custom dictionaries.
-
-The research question behind these tools is:
-
-> How much additional PDF stream size reduction can be achieved by training PDF-specific Brotli dictionaries for different stream types, compared with vanilla Brotli?
-
 ## Supported PDF stream categories
 
 The tools support the following categories:
